@@ -1322,6 +1322,14 @@ export async function ncc_fresh(task, opts) {
     .target('src/compiled/fresh')
 }
 // eslint-disable-next-line camelcase
+externals['fs-extra'] = 'next/dist/compiled/fs-extra'
+export async function ncc_fs_extra(task, opts) {
+  await task
+    .source(relative(__dirname, require.resolve('fs-extra')))
+    .ncc({ packageName: 'fs-extra', externals })
+    .target('src/compiled/fs-extra')
+}
+// eslint-disable-next-line camelcase
 externals['glob'] = 'next/dist/compiled/glob'
 export async function ncc_glob(task, opts) {
   await task
@@ -2284,6 +2292,7 @@ export async function ncc(task, opts) {
         'ncc_find_cache_dir',
         'ncc_find_up',
         'ncc_fresh',
+        'ncc_fs_extra',
         'ncc_glob',
         'ncc_gzip_size',
         'ncc_http_proxy',

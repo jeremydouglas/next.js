@@ -285,8 +285,8 @@ importers:
         specifier: 5.0.2
         version: 5.0.2
       fs-extra:
-        specifier: 9.0.0
-        version: 9.0.0
+        specifier: 11.1.1
+        version: 11.1.1
       get-port:
         specifier: 5.1.1
         version: 5.1.1
@@ -811,6 +811,9 @@ importers:
       caniuse-lite:
         specifier: 1.0.30001406
         version: 1.0.30001406
+      fs-extra:
+        specifier: 11.1.1
+        version: 11.1.1
       postcss:
         specifier: 8.4.31
         version: 8.4.31
@@ -998,6 +1001,9 @@ importers:
       '@types/fresh':
         specifier: 0.5.0
         version: 0.5.0
+      '@types/fs-extra':
+        specifier: 8.1.0
+        version: 8.1.0
       '@types/glob':
         specifier: 7.1.1
         version: 7.1.1
@@ -12396,6 +12402,14 @@ packages:
       universalify: 2.0.0
     dev: false
 
+  /fs-extra@11.1.1:
+    resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.0.1
+      universalify: 2.0.0
+
   /fs-extra@5.0.0:
     resolution: {integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==}
     dependencies:
@@ -12411,16 +12425,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 4.0.0
       universalify: 0.1.2
-    dev: true
-
-  /fs-extra@9.0.0:
-    resolution: {integrity: sha512-pmEYSk3vYsG/bF651KPUXZ+hvjpgWYw/Gc7W9NFUe3ZVLczKKWIij3IKpOrQcdw4TILtibFslZ0UmR8Vvzig4g==}
-    engines: {node: '>=10'}
-    dependencies:
-      at-least-node: 1.0.0
-      graceful-fs: 4.2.9
-      jsonfile: 6.0.1
-      universalify: 1.0.0
     dev: true
 
   /fs-extra@9.1.0:
@@ -12971,6 +12975,7 @@ packages:
 
   /graceful-fs@4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
+    dev: false
 
   /grapheme-splitter@1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
