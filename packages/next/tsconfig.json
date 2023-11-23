@@ -8,7 +8,15 @@
     "moduleResolution": "node",
     "jsx": "react",
     "stripInternal": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "next/dist/compiled/*": ["node_modules/@types/*", "node_modules/*"],
+      "next/dist/compiled/babel/*": [
+        "node_modules/@types/babel__*",
+        "node_modules/@babel/*"
+      ]
+    }
   },
   "exclude": [
     "dist",

@@ -19,7 +19,7 @@ import { Worker } from '../lib/worker'
 import { defaultConfig } from '../server/config-shared'
 import devalue from 'next/dist/compiled/devalue'
 import findUp from 'next/dist/compiled/find-up'
-import { nanoid } from 'next/dist/compiled/nanoid/index.cjs'
+import { nanoid } from 'next/dist/compiled/nanoid'
 import { pathToRegexp } from 'next/dist/compiled/path-to-regexp'
 import path from 'path'
 import {
@@ -357,7 +357,7 @@ export default async function build(
   noMangling = false,
   appDirOnly = false,
   turboNextBuild = false,
-  turboNextBuildRoot = null,
+  turboNextBuildRoot: string | undefined,
   buildMode: 'default' | 'experimental-compile' | 'experimental-generate'
 ): Promise<void> {
   const isCompile = buildMode === 'experimental-compile'
